@@ -47,35 +47,6 @@ Pacific Portraits
 
 
 
-#---------- GALLERY ----------#
-
-The Drunken
-Food, Event
-alt = arrow-forward icon
-
-Lettuce Entertain
-Landscape
-
-Leaping Lizard
-Model, Fashion
-
-Juan More Taco
-Architecture, Event
-
-Goldilox Bagels
-People, Film
-
-Cookie Monstah
-Wedding, Event
-
-Divine Pastabilities
-Wedding, Model
-
-The Lockhart Bar
-Health & Wellnes
-
-alt = mouse scroll
-
 
 
 #---------- CATEGORY ----------#
