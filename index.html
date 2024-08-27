@@ -28,11 +28,19 @@
   -->
   <link rel="stylesheet" href="./assets/font/font.css">
 
-  <!-- 
-    - preload images
-  -->
-  <!-- <link rel="preload" as="image" href="./assets/images/loading.svg">
-  <link rel="preload" as="image" href="./assets/images/loading-circle.svg"> -->
+  <style>
+    .audio{
+      text-align: right;
+      margin-top: 2rem;
+      font-size: 2rem;
+      margin-right: 2rem;
+      font-weight: bold;
+    }
+  </style>
+    
+    
+  
+
 
 </head>
 
@@ -117,13 +125,26 @@
 
     </div>
   </header>
-
-
-
-
-
-  <main>
+ <main>
     <article>
+
+      <!-- audio -->
+       <div class="audio">
+ <!-- Audio Element -->
+ <audio id="background-music" autoplay loop>
+  <source src="IMG/musikk22.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- Audio Controls -->
+<div class="audio-controls">
+  <span>Music</span>
+  <button onclick="toggleMusic()">Pause</button>
+</div>
+</div>
+
+      <!-- audio end -->
+      
 
       <!-- 
         - #HERO
@@ -650,6 +671,11 @@
 
 
 
+
+
+
+
+
   <!-- 
     - #BACK TO TOP
   -->
@@ -674,6 +700,41 @@
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+
+
+  <!-- audio js -->
+
+<script>
+        let musicPlaying = true;
+        const music = document.getElementById('background-music');
+        const toggleButton = document.querySelector('.audio-controls button');
+
+        function toggleMusic() {
+            if (musicPlaying) {
+                music.pause();
+                toggleButton.textContent = 'Play';
+            } else {
+                music.play();
+                toggleButton.textContent = 'Pause';
+            }
+            musicPlaying = !musicPlaying;
+        }
+
+        // Ensure the music plays on some browsers that block autoplay
+        window.addEventListener('load', () => {
+            music.play().catch(() => {
+                toggleButton.textContent = 'Play';
+                musicPlaying = false;
+            });
+        });
+    </script>
+
+<!-- audio js -->
+
+
+  
+
+
 
 </body>
 
